@@ -1,0 +1,139 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Set the background color for the entire body */
+
+}
+
+.menu-bar {
+    background-color: #333;
+    z-index: 2; /* Ensure the menu bar stays on top */
+}
+
+.menu-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.menu-bar li {
+    float: left;
+}
+
+.menu-bar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu-bar li a:hover {
+    background-color: #111;
+}
+
+.hero {
+    position: relative;
+    height: 100vh; /* Set the height to full viewport height */
+}
+
+.coffee-shop-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Lower z-index to prevent blurring */
+}
+
+.hero-text {
+    position: absolute;
+    top: 60%; /* Adjusted to move it down */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 2; /* Higher z-index to stay above the menu bar */
+}
+
+.hero-text h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    /* Display regular menu bar in mobile mode */
+    .menu-bar ul {
+        display: block;
+        text-align: center;
+    }
+
+    .menu-bar li {
+        float: none;
+        display: inline-block;
+    }
+
+    .menu-bar li a {
+        display: block;
+        padding: 6px 10px;
+        text-decoration: none;
+    }
+    
+    .hero {
+        height: auto;
+        padding: 50px 0;
+    }
+
+    .hero-text {
+        padding: 10px;
+        top: 250%; /* Adjusted for better positioning */
+    }
+
+    .hero-text h1 {
+        font-size: 2em; /* Reduced font size for mobile */
+    }
+
+    .coffee-shop-img {
+        height: 100vh; /* Adjusted to leave space for the menu bar */
+    }
+
+    button {
+        padding: 8px 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    button {
+        padding: 8px 12px;
+    }
+}
